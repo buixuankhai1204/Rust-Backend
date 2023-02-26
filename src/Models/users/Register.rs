@@ -12,9 +12,9 @@ pub struct RequestUser{
     #[validate(length(min = 3, message = "Name must be greater than 3 chars"))]
     pub username: String,
     pub fullname: String,
-    pub email: Option<String>,
+    pub email: String,
     pub age: u32,
-    pub address: Option<String>
+    pub address: String
 }
 
 impl Responder for RequestUser {
